@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div th:if="${images.size() > 0}">
+
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Ảnh</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="sample : ${images}">
+      <td th:text="${sample.id}"></td>
+      <td><img th:src="@{${sample.image}}" alt="${sample.name}" height="60px" /></td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
+</body>
+</html>
